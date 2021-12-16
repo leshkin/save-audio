@@ -11,7 +11,7 @@
 
   async function estimate() {
     const estimate = await navigator.storage.estimate()
-    freeStorage.value = ((estimate.quota - estimate.usage) / 1_000_000).toFixed(0) + 'MB'
+    freeStorage.value = ((estimate.quota - estimate.usage) / 1_000_000).toFixed(0) + ' MB'
   }
 
   async function getData() {
@@ -68,14 +68,14 @@
 </script>
 
 <template>
-  <div class="mx-auto max-w-md">
+  <div class="mx-auto max-w-lg">
     <h1 class="my-7 text-center text-xl">{{ freeStorage }} free storage space</h1>
     <div class="flex flex-row justify-center items-center">
-      <input v-model="url" type="text" class="border-2 py-2 px-4 mx-4 rounded"
+      <input v-model="url" type="text" class="border-2 py-2 px-4 mx-4 rounded w-96"
              placeholder="Insert URL to MP3 file with the allowed CORS"
              :disabled="disabled">
       <button class="bg-sky-500 text-white font-bold py-2 px-4 rounded disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed"
-              @click="add" :disabled="disabled">Add mp3</button>
+              @click="add" :disabled="disabled">Add</button>
     </div>
     <div v-for="entry in mp3BlobArray" class="flex flex-row justify-center items-center">
       <audio controls :src="entry.value" class="m-3"></audio>

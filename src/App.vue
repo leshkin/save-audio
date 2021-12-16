@@ -71,7 +71,9 @@
   <div class="mx-auto max-w-md">
     <h1 class="my-7 text-center text-xl">{{ freeStorage }} free storage space</h1>
     <div class="flex flex-row justify-center items-center">
-      <input v-model="url" type="text" class="border-2 py-2 px-4 mx-4 rounded" :disabled="disabled">
+      <input v-model="url" type="text" class="border-2 py-2 px-4 mx-4 rounded"
+             placeholder="Insert URL to MP3 file with the allowed CORS"
+             :disabled="disabled">
       <button class="bg-sky-500 text-white font-bold py-2 px-4 rounded disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed"
               @click="add" :disabled="disabled">Add mp3</button>
     </div>

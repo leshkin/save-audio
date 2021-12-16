@@ -1,6 +1,0 @@
-{
-  "appId": "com.example.app",
-  "appName": "save-audio",
-  "webDir": "dist",
-  "bundledWebRuntime": false
-}
